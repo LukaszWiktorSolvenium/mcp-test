@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MCP Servers List</title>
+    <title>MCP Reference Servers</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
             line-height: 1.6;
@@ -19,61 +19,166 @@
             margin: 10px 0;
             border-radius: 5px;
             background-color: #fff;
+            transition: transform 0.2s;
+        }
+        .server:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .server h2 {
             margin-top: 0;
             color: #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        .status {
+        .server-type {
+            font-size: 0.8em;
+            background-color: #e3f2fd;
+            color: #1976d2;
+            padding: 3px 8px;
+            border-radius: 12px;
+        }
+        .description {
+            color: #666;
+            margin: 10px 0;
+        }
+        .source-link {
             display: inline-block;
-            padding: 5px 10px;
-            border-radius: 3px;
-            font-size: 14px;
-            margin-left: 10px;
+            margin-top: 10px;
+            color: #2196f3;
+            text-decoration: none;
         }
-        .status.active {
-            background-color: #d4edda;
-            color: #155724;
+        .source-link:hover {
+            text-decoration: underline;
         }
-        .status.inactive {
-            background-color: #f8d7da;
-            color: #721c24;
+        .intro {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
         }
     </style>
 </head>
 <body>
-    <h1>Available MCP Servers</h1>
+    <div class="intro">
+        <h1>🌟 MCP Reference Servers</h1>
+        <p>These servers demonstrate MCP features and showcase the Typescript and Python SDK capabilities. Each server is designed to provide specific functionality and serve as a reference implementation.</p>
+    </div>
     
     <div class="server">
-        <h2>Primary MCP Server <span class="status active">Active</span></h2>
-        <p><strong>URL:</strong> mcp-primary.example.com</p>
-        <p><strong>Port:</strong> 8080</p>
-        <p><strong>Region:</strong> US East</p>
-        <p><strong>Version:</strong> 2.1.0</p>
+        <h2>AWS KB Retrieval <span class="server-type">AWS Integration</span></h2>
+        <div class="description">Retrieval from AWS Knowledge Base using Bedrock Agent Runtime</div>
+        <a href="src/aws-kb-retrieval-server" class="source-link">View Source →</a>
     </div>
 
     <div class="server">
-        <h2>Backup MCP Server <span class="status active">Active</span></h2>
-        <p><strong>URL:</strong> mcp-backup.example.com</p>
-        <p><strong>Port:</strong> 8080</p>
-        <p><strong>Region:</strong> US West</p>
-        <p><strong>Version:</strong> 2.1.0</p>
+        <h2>Brave Search <span class="server-type">Search</span></h2>
+        <div class="description">Web and local search using Brave's Search API</div>
+        <a href="src/brave-search" class="source-link">View Source →</a>
     </div>
 
     <div class="server">
-        <h2>Development MCP Server <span class="status active">Active</span></h2>
-        <p><strong>URL:</strong> mcp-dev.example.com</p>
-        <p><strong>Port:</strong> 8080</p>
-        <p><strong>Region:</strong> EU Central</p>
-        <p><strong>Version:</strong> 2.2.0-beta</p>
+        <h2>EverArt <span class="server-type">AI Generation</span></h2>
+        <div class="description">AI image generation using various models</div>
+        <a href="src/everart" class="source-link">View Source →</a>
     </div>
 
     <div class="server">
-        <h2>Testing MCP Server <span class="status inactive">Maintenance</span></h2>
-        <p><strong>URL:</strong> mcp-test.example.com</p>
-        <p><strong>Port:</strong> 8080</p>
-        <p><strong>Region:</strong> Asia Pacific</p>
-        <p><strong>Version:</strong> 2.1.0</p>
+        <h2>Everything <span class="server-type">Reference</span></h2>
+        <div class="description">Reference / test server with prompts, resources, and tools</div>
+        <a href="src/everything" class="source-link">View Source →</a>
+    </div>
+
+    <div class="server">
+        <h2>Fetch <span class="server-type">Web Tools</span></h2>
+        <div class="description">Web content fetching and conversion for efficient LLM usage</div>
+        <a href="src/fetch" class="source-link">View Source →</a>
+    </div>
+
+    <div class="server">
+        <h2>Filesystem <span class="server-type">Storage</span></h2>
+        <div class="description">Secure file operations with configurable access controls</div>
+        <a href="src/filesystem" class="source-link">View Source →</a>
+    </div>
+
+    <div class="server">
+        <h2>Git <span class="server-type">Version Control</span></h2>
+        <div class="description">Tools to read, search, and manipulate Git repositories</div>
+        <a href="src/git" class="source-link">View Source →</a>
+    </div>
+
+    <div class="server">
+        <h2>GitHub <span class="server-type">Version Control</span></h2>
+        <div class="description">Repository management, file operations, and GitHub API integration</div>
+        <a href="src/github" class="source-link">View Source →</a>
+    </div>
+
+    <div class="server">
+        <h2>GitLab <span class="server-type">Version Control</span></h2>
+        <div class="description">GitLab API, enabling project management</div>
+        <a href="src/gitlab" class="source-link">View Source →</a>
+    </div>
+
+    <div class="server">
+        <h2>Google Drive <span class="server-type">Storage</span></h2>
+        <div class="description">File access and search capabilities for Google Drive</div>
+        <a href="src/gdrive" class="source-link">View Source →</a>
+    </div>
+
+    <div class="server">
+        <h2>Google Maps <span class="server-type">Location</span></h2>
+        <div class="description">Location services, directions, and place details</div>
+        <a href="src/google-maps" class="source-link">View Source →</a>
+    </div>
+
+    <div class="server">
+        <h2>Memory <span class="server-type">Storage</span></h2>
+        <div class="description">Knowledge graph-based persistent memory system</div>
+        <a href="src/memory" class="source-link">View Source →</a>
+    </div>
+
+    <div class="server">
+        <h2>PostgreSQL <span class="server-type">Database</span></h2>
+        <div class="description">Read-only database access with schema inspection</div>
+        <a href="src/postgres" class="source-link">View Source →</a>
+    </div>
+
+    <div class="server">
+        <h2>Puppeteer <span class="server-type">Web Tools</span></h2>
+        <div class="description">Browser automation and web scraping</div>
+        <a href="src/puppeteer" class="source-link">View Source →</a>
+    </div>
+
+    <div class="server">
+        <h2>Sentry <span class="server-type">Monitoring</span></h2>
+        <div class="description">Retrieving and analyzing issues from Sentry.io</div>
+        <a href="src/sentry" class="source-link">View Source →</a>
+    </div>
+
+    <div class="server">
+        <h2>Sequential Thinking <span class="server-type">AI</span></h2>
+        <div class="description">Dynamic and reflective problem-solving through thought sequences</div>
+        <a href="src/sequentialthinking" class="source-link">View Source →</a>
+    </div>
+
+    <div class="server">
+        <h2>Slack <span class="server-type">Communication</span></h2>
+        <div class="description">Channel management and messaging capabilities</div>
+        <a href="src/slack" class="source-link">View Source →</a>
+    </div>
+
+    <div class="server">
+        <h2>Sqlite <span class="server-type">Database</span></h2>
+        <div class="description">Database interaction and business intelligence capabilities</div>
+        <a href="src/sqlite" class="source-link">View Source →</a>
+    </div>
+
+    <div class="server">
+        <h2>Time <span class="server-type">Utility</span></h2>
+        <div class="description">Time and timezone conversion capabilities</div>
+        <a href="src/time" class="source-link">View Source →</a>
     </div>
 
     <footer style="margin-top: 40px; text-align: center; color: #666;">
