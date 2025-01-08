@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCP Servers List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .server {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .server h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .status {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .status.active {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .status.inactive {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <h1>Available MCP Servers</h1>
+    
+    <div class="server">
+        <h2>Primary MCP Server <span class="status active">Active</span></h2>
+        <p><strong>URL:</strong> mcp-primary.example.com</p>
+        <p><strong>Port:</strong> 8080</p>
+        <p><strong>Region:</strong> US East</p>
+        <p><strong>Version:</strong> 2.1.0</p>
+    </div>
+
+    <div class="server">
+        <h2>Backup MCP Server <span class="status active">Active</span></h2>
+        <p><strong>URL:</strong> mcp-backup.example.com</p>
+        <p><strong>Port:</strong> 8080</p>
+        <p><strong>Region:</strong> US West</p>
+        <p><strong>Version:</strong> 2.1.0</p>
+    </div>
+
+    <div class="server">
+        <h2>Development MCP Server <span class="status active">Active</span></h2>
+        <p><strong>URL:</strong> mcp-dev.example.com</p>
+        <p><strong>Port:</strong> 8080</p>
+        <p><strong>Region:</strong> EU Central</p>
+        <p><strong>Version:</strong> 2.2.0-beta</p>
+    </div>
+
+    <div class="server">
+        <h2>Testing MCP Server <span class="status inactive">Maintenance</span></h2>
+        <p><strong>URL:</strong> mcp-test.example.com</p>
+        <p><strong>Port:</strong> 8080</p>
+        <p><strong>Region:</strong> Asia Pacific</p>
+        <p><strong>Version:</strong> 2.1.0</p>
+    </div>
+
+    <footer style="margin-top: 40px; text-align: center; color: #666;">
+        <p>Last updated: January 9, 2025</p>
+    </footer>
+</body>
+</html>
